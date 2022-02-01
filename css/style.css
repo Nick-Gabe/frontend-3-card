@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --pmr-orange: hsl(31, 77%, 52%);
+    --pmr-cyan: hsl(184, 100%, 22%);
+    --pmr-dark-cyan: hsl(179, 100%, 13%);
+
+    --ntrl-white: hsl(0, 0%, 95%);
+    --ntrl-gray: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    margin: 5rem 0;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.card {
+    max-width: 490px;
+    width: 88%;
+    height: 410px;
+    padding: 3rem 3rem;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.card > h2 {
+    color: var(--ntrl-white);
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.card > p {
+    margin: 0 0 2rem 0;
+    color: var(--ntrl-gray);
+}
+
+.sedan {
+    background: var(--pmr-orange);
+    color: var(--pmr-orange);
+    border-radius: 10px 10px 0 0;
+}
+
+.suv {
+    padding-right: 50px;
+    color: var(--pmr-cyan);
+    background: var(--pmr-cyan);
+}
+
+.luxury {
+    padding-right: 50px;
+    color: var(--pmr-dark-cyan);
+    background: var(--pmr-dark-cyan);
+    border-radius: 0 0 10px 10px;
+}
+
+.attribution {
+    padding: 5px 0;
+    position: fixed;
+    color: var(--ntrl-white);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 11px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.attribution a {
+    color: #3e52a3;
+}
+
+.card__cta {
+    display: inline-block;
+    background: var(--ntrl-white);
+    text-decoration: none;
+    color: inherit;
+    width: 8rem;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px 10px 10px 0;
+}
+
+.card__cta:hover {
+    animation: buttonExpanding 1s ease 0s infinite backwards;
+}
+
+@keyframes buttonExpanding {
+    from {
+        box-shadow: 0 0 0 0 #fff;
+    }
+    to {
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 5rem 2rem;
+    }
+    .card {
+        max-width: none;
+        width: 100%;
+    }
+    .card > p {
+        margin-bottom: 5rem;
+    }
+    .card__cta {
+        margin: 0;
+    }
+    .sedan {
+        border-radius: 10px 0 0 0;
+    }
+    .suv {
+        border-radius: 0 10px 0 0;
+    }
+    .luxury {
+        border-radius: 0 0 10px 10px;
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        grid-template-columns: repeat(3, 330px);
+        height: 100vh;
+        margin: 0;
+    }
+    .card {
+        height: initial;
+    }
+    .sedan {
+        border-radius: 10px 0 0 10px;
+    }
+    .suv {
+        border-radius: 0 0 0 0;
+    }
+    .luxury {
+        border-radius: 0 10px 10px 0;
+        grid-column: span 1;
+    }
+    .luxury > p {
+        width: 25ch;
+    }
+}
