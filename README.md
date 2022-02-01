@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click here](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-/hub/responsive-card-component-using-grid-rxC0ndyhj)
+- Solution URL: [Click here](https://www.frontendmentor.io/solutions/responsive-card-component-using-grid-rxC0ndyhj)
 - Live Site URL: [Click here](https://nick-gabe.github.io/frontend-3-card/)
 
 ## My process
